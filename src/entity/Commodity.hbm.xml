@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="entity.Commodity" table="commodity">
+
+        <id name="commodityNo" type="java.lang.String" column="commodityno" length="8">
+            <generator class="assigned"/>
+        </id>
+        <property name="commodityName" type="java.lang.String"/>
+        <property name="price" type="double"/>
+        <property name="unit" type="java.lang.String"/>
+        <property name="stock" type="double"/>
+        <property name="produceDate" type="java.sql.Date"/>
+        <property name="qualityDate" type="int"/>
+        <property name="typeName" type="java.lang.String"/>
+        <property name="content" type="java.lang.String"/>
+        <property name="imgUri" type="java.lang.String"/>
+    </class>
+
+</hibernate-mapping>
+

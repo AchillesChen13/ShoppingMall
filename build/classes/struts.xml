@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+<!-- 	<constant name="struts.multipart.saveDir" value="/cImg"></constant> -->
+    <package name="default" namespace="/" extends="struts-default">
+    	
+    </package>
+    <package name="manage" namespace="/manage" extends="default">
+    	<action name="*_*" class="action.{1}Action" method="{2}">
+    		<result name="sup_login_success">/manage/main.jsp</result>
+    		<result name="sup_login_failure">/manage/login.jsp</result>
+    		<result name="sup_logout_success">/manage/login.jsp</result>
+    		<result name="input">/manage/login.jsp</result>
+    		
+<!--     		<param name="savePath">/cImg</param> -->
+    		<result name="add_commodity_success">/manage/goodsManage.jsp</result>
+    		<result name="add_commodity_failure">/manage/addGoods.jsp</result>	
+    		<result name="query_commodity_successs_manage">/manage/goodsManage.jsp</result>
+    		<result name="query_commodity_successs_list">/manage/goodslist.jsp</result>
+    		<result name="modify_commodity_success">/manage/modifyGoods.jsp</result>
+    		<result name="update_commodity_success">/manage/goodslist.jsp</result>
+    		<result name="update_commodity_failure">/manage/modifyGoods.jsp</result>
+    		
+    		
+    		<result name="add_type_success">/manage/typelist.jsp</result>
+    		<result name="add_type_failure">/manage/addType.jsp</result>
+    		<result name="query_type_success">/manage/addGoods.jsp</result>
+    		<result name="query_type_failure">/manage/typelist.jsp</result>
+    		<result name="query_typeOne_success">/manage/modifyType.jsp</result>
+    		<result name="modify_type_success">/manage/typelist.jsp</result>
+    		<result name="modify_type_failure">/manage/modifyType.jsp</result>
+    		
+    		<result name="manage_order_success">/manage/orderlist.jsp</result>
+    		<result name="manage_order_fialure">/manage/orderlist.jsp</result>
+    		<result name="query_allorder_success">/manage/orderlist.jsp</result>
+    		<result name="query_orderstate_success">/manage/orderlist.jsp</result>
+    		
+    		
+    	</action>
+    </package>
+    
+    <package name="user" namespace="/user" extends="default">
+    	<action name="*_*" class="action.{1}Action" method="{2}">
+    		<result name="user_login_success">/user/goods.jsp</result>
+    		<result name="user_login_failure">/user/login.jsp</result>
+    		<result name="user_registe_success">/user/goods.jsp</result>
+    		<result name="user_registe_failure">/user/register.jsp</result>
+    		<result name="user_logout_success">/index.jsp</result>
+    		
+    		<result name="query_Commodity_success">/user/goods.jsp</result>
+    		<result name="query_commodity_successs">/user/goods.jsp</result>
+    		
+    		<result name="ordering_success">/user/order.jsp</result>
+    		<result name="ordering_failure">/user/detail.jsp</result>
+    		<result name="username_null">/user/detail.jsp</result>
+    		<result name="stock_error">/user/detail.jsp</result>
+    		<result name="address_error">/user/detail.jsp</result>
+    		<result name="query_order_success">/user/order.jsp</result>
+    		<result name="query_order_failure">/user/order.jsp</result>
+    		<result name="query_orderDB_success">/user/orderDetail.jsp</result>
+    		<result name="modify_order_success">/user/order.jsp</result>
+    		
+    		<result name="query_commodity_success">/user/detail.jsp</result>
+    		
+    		<result name="query_address_success">/user/address.jsp</result>
+    		<result name="query_address_failure">/user/address.jsp</result>
+    		<result name="add_address_success">/user/address.jsp</result>
+    		<result name="add_address_failure">/user/address.jsp</result>
+    		<result name="delete_address_success">/user/address.jsp</result>
+    		<result name="delete_address_failure">/user/address.jsp</result>
+    		
+    		<result name="add_cart_success">/user/gouwuche.jsp</result>
+    		<result name="add_cart_failure">/user/detail.jsp</result>
+    		<result name="remove_cart_success">/user/gouwuche.jsp</result>
+    		<result name="remove_cart_failure">/user/gouwuche.jsp</result>
+    		<result name="display_cart_success">/user/gouwuche.jsp</result>
+    		<result name="display_cart_failure">/user/gouwuche.jsp</result>
+    		<result name="pay_cart_success">/user/order.jsp</result>
+    		<result name="pay_cart_failure">/user/gouwuche.jsp</result>
+    	</action>
+    </package>
+    
+
+</struts>
